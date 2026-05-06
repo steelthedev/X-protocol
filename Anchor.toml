@@ -6,10 +6,7 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-cpmm_rust = "FTsZ6dsJPgtAHKHy6ECLCqMA541bDkC9gXKnAzvoaF6j"
-
-[registry]
-url = "https://api.apr.dev"
+cpmm_rust = "su3ABvPxbBB72HJd91GoezijKr7AW29wBYn5pFEfvrv"
 
 [provider]
 cluster = "localnet"
@@ -17,3 +14,5 @@ wallet = "~/.config/solana/id.json"
 
 [scripts]
 test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 \"tests/**/*.ts\""
+
+[hooks]

@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 
-declare_id!("FTsZ6dsJPgtAHKHy6ECLCqMA541bDkC9gXKnAzvoaF6j");
+declare_id!("su3ABvPxbBB72HJd91GoezijKr7AW29wBYn5pFEfvrv");
 
 mod constants;
 mod errors;
@@ -13,11 +13,9 @@ mod state;
 pub mod cpmm_rust {
     use super::*;
 
-    pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
-        msg!("Greetings from: {:?}", ctx.program_id);
-        Ok(())
+    pub fn initialize_config(
+        ctx: Context<instructions::initialize_config::IntializeConfig>,
+    ) -> Result<()> {
+        instructions::initialize_config::initialize_config(ctx)
     }
 }
-
-#[derive(Accounts)]
-pub struct Initialize {}
